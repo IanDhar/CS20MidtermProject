@@ -2,10 +2,10 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f3e0b6; /* Light beige background */
+        background-color: #faedcd; /* Light beige background */
     }
     header {
-        background-color: #da8830; /* Rusty orange header */
+        background-color: #d4a373; /* Rusty orange header */
         padding: 10px;
     }
     nav {
@@ -31,7 +31,7 @@
         padding: 20px;
     }
     footer {
-        background-color: #da8830; /* Rusty orange footer */
+        background-color: #d4a373; /* Rusty orange footer */
         color: #fff;
         text-align: center;
         padding: 10px;
