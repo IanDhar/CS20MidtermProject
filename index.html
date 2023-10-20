@@ -102,7 +102,7 @@
 		#slides-wrapper{height:320px;}
 	</style>
 	<script language="javascript">
-	imgs = ["/images/farmsun.jpeg", "/images/produce.jpeg","/images/cows.jpeg"];
+	imgs = ["farmsun.jpeg", "produce.jpeg","cows.jpeg"];
 	var slideIndex=0;
 	
 	$(document).ready(function() {
@@ -120,7 +120,7 @@
 	function nextSlide()
 	{
 		slideIndex++;
-		slideIndex= slideIndex== imgs.length?0: petIndex;
+		slideIndex= slideIndex== imgs.length?0: slideIndex;
 		$("#slide img").attr("src", "images/"+imgs[slideIndex]);
 		$("#slide img").fadeIn(2000,slideShow);
 	}
