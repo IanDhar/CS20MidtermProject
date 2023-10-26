@@ -20,7 +20,7 @@
 	  margin-bottom: 100px;
 	text-align: center;
         }
-
+	
 
         /* Hide the images by default */
         .mySlides {
@@ -111,6 +111,24 @@
           from {opacity: .4}
           to {opacity: 1}
         }
+	.feature-box {
+		    text-align: center;
+		    border: 2px solid #fff;
+		    padding: 20px;
+		    margin: 20px;
+		    display: inline-block;
+		}
+		
+		.feature-box img {
+		    width: 100px; /* Adjust the width of the images as needed */
+		    height: 100px; /* Adjust the height of the images as needed */
+		    display: block;
+		    margin: 0 auto;
+		}
+		
+		.feature-box p {
+		    font-weight: bold;
+		}
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<style type="text/css">
@@ -164,7 +182,25 @@
     	<div id="about-us">
             <h2>About Us</h2>
             <p>Welcome to Lucky Charm Farm! We are a family-owned farm dedicated to providing the freshest produce and a unique farm experience. Our commitment to quality and sustainability is at the heart of everything we do. Explore our farm, meet our animals, and enjoy the bountiful harvest of fresh vegetables and fruits. We can't wait to share the charm of our farm with you.</p>
-        </div>
+	</div>
+	    <a href="produce.html" class="feature-link">
+                <div class="feature-box">
+                    <img src="produce-image.jpg" alt="Produce">
+                    <p>Produce</p>
+                </div>
+            </a>
+            <a href="picking.html" class="feature-link">
+                <div class="feature-box">
+                    <img src="picking-image.jpg" alt="Picking">
+                    <p>Picking</p>
+                </div>
+            </a>
+            <a href="animals.html" class="feature-link">
+                <div class="feature-box">
+                    <img src="animals-image.jpg" alt="Animals">
+                    <p>Animals</p>
+                </div>
+            </a>
     </main>
     <footer>
         &copy; 2023 Lucky Charm Farm. All rights reserved.
