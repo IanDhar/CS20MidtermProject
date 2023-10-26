@@ -22,7 +22,12 @@
         .mySlides {
           display: none;
         }
-        
+	/* Add this CSS to make slideshow images uniform in size */
+	#slide img {
+	    width: 100%; /* Set the width to 100% to fit within the slideshow container */
+	    height: 320px; /* Set a fixed height for uniform size */
+	}
+
         /* Next & previous buttons */
         .prev, .next {
           cursor: pointer;
@@ -102,57 +107,26 @@
 		#slides-wrapper{height:320px;}
 	</style>
 	<script language="javascript">
-	imgs = ["farmsun.jpeg", "produce.jpeg","cows.jpeg"];
-	var slideIndex=0;
+	    imgs = ["farmsun.jpeg", "produce.jpeg", "cows.jpeg"];
+	    var slideIndex = 0;
 	
-	$(document).ready(function() {
-		$("#startSlides").click(slideShow);
-		$("#stopSlides").click(function()
-			{
-				$("#slide img").stop().fadeIn();
-			}
-		);
-	})
-	function slideShow()
-	{
-		$("#slide img").fadeOut(2000, nextSlide);
-	}
-	function nextSlide()
-	{
-		slideIndex++;
-		slideIndex= slideIndex== imgs.length?0: slideIndex;
-		$("#slide img").attr("src", "images/"+imgs[slideIndex]);
-		$("#slide img").fadeIn(2000,slideShow);
-	}
-        // let slideIndex = 1;
-        // showSlides(slideIndex);
+	    $(document).ready(function () {
+	        // Start the slideshow when the page loads
+	        slideShow();
+	    });
+	
+	    function slideShow() {
+	        $("#slide img").fadeOut(2000, nextSlide);
+	    }
+	
+	    function nextSlide() {
+	        slideIndex++;
+	        slideIndex = slideIndex == imgs.length ? 0 : slideIndex;
+	        $("#slide img").attr("src", "images/" + imgs[slideIndex]);
+	        $("#slide img").fadeIn(2000, slideShow);
+	    }
+	</script>
 
-        // // Next/previous controls
-        // function plusSlides(n) {
-        // showSlides(slideIndex += n);
-        // }
-
-        // // Thumbnail image controls
-        // function currentSlide(n) {
-        // showSlides(slideIndex = n);
-        // }
-
-        // function showSlides(n) {
-        //     let i;
-        //     let slides = document.getElementsByClassName("mySlides");
-        //     let dots = document.getElementsByClassName("dot");
-        //     if (n > slides.length) {slideIndex = 1}
-        //     if (n < 1) {slideIndex = slides.length}
-        //     for (i = 0; i < slides.length; i++) {
-        //         slides[i].style.display = "none";
-        //     }
-        //     for (i = 0; i < dots.length; i++) {
-        //         dots[i].className = dots[i].className.replace(" active", "");
-        //     }
-        //     slides[slideIndex-1].style.display = "block";
-        //     dots[slideIndex-1].className += " active";
-        // }
-        </script>
 </head>
 <body>
     <header>
