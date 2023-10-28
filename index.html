@@ -95,17 +95,22 @@
 	    .feature-box:hover p {
 	        color: gold; 
 	    }
-	    @media (max-width: 600px) {
-            .feature-box-container {
-                flex-direction: column; /* Stack the feature boxes vertically */
-                align-items: center; /* Center the feature boxes horizontally */
-            }
-
-            .feature-box {
-                width: 80%; /* Adjust the width for better mobile display */
-                margin: 20px auto; /* Center the boxes horizontally */
-            }
-        }
+	     @media (max-width: 600px) {
+	            .feature-box-container {
+	                flex-direction: column; /* Stack the feature boxes vertically */
+	                align-items: center; /* Center the feature boxes horizontally */
+	            }
+	
+	            .feature-box {
+	                width: 80%; /* Adjust the width for better mobile display */
+	                margin: 20px auto; /* Center the boxes horizontally */
+	            }
+	
+	            .feature-box img {
+	                max-width: 100%; /* Set a maximum width for the images */
+	                height: auto; /* Maintain aspect ratio */
+	            }
+	        }
 	    .upcoming-events {
         text-align: center;
         margin-top: 40px;
