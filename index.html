@@ -96,10 +96,16 @@
 	        color: gold; 
 	    }
 	    @media (max-width: 600px) {
-    .feature-box {
-        width: 100%; /* Change the width to 100% for smaller screens */
-    }
-}
+            .feature-box-container {
+                flex-direction: column; /* Stack the feature boxes vertically */
+                align-items: center; /* Center the feature boxes horizontally */
+            }
+
+            .feature-box {
+                width: 80%; /* Adjust the width for better mobile display */
+                margin: 20px auto; /* Center the boxes horizontally */
+            }
+        }
 	    .upcoming-events {
         text-align: center;
         margin-top: 40px;
