@@ -157,9 +157,10 @@
         text-align: center;
         margin-top: 40px;
         display: flex; /* Use flexbox to center the event boxes */
+	flex-direction: column; /* Stack events on top of each other */
+        align-items: center; /* Center events horizontally */
         flex-wrap: wrap;
         justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
     }
 
     .event {
@@ -279,7 +280,7 @@
         </div>
     </a>
 </div>
-	<h2>Upcoming Events</h2>
+	<h2 style="text-align:center;">Upcoming Events</h2>
 	<div class="upcoming-events">
         <div class="event">
             <img src="images/hnight4.jpeg" alt="Halloween Night">
