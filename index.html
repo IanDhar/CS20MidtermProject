@@ -154,22 +154,22 @@
 	        color: gold; 
 	    }
 	    .upcoming-events {
-	        text-align: center;
-	        margin-top: 40px;
-	    }
+        text-align: center;
+        margin-top: 40px;
+        display: flex; /* Use flexbox to center the event boxes */
+        flex-wrap: wrap;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+    }
 
     .event {
-	    display: inline-block; /* Center the event boxes horizontally */
-	justify-content: center;
-        display: flex; /* Stack the content in the event boxes */
-        flex-direction: column;
-        align-items: center; /* Center the content horizontally */
+        flex: 1;
         margin: 10px;
         padding: 10px;
         border: 2px solid #fff;
         background-color: #f9f9f9;
         text-align: center;
-	max-width: 350px;
+        max-width: 350px;
     }
 
     .event img {
@@ -179,13 +179,12 @@
 
     .event h3 {
         margin: 10px 0;
-        font-size: 20px; /* Enlarge the text */
+        font-size: 20px;
     }
 
     .event p {
-        font-size: 16px; /* Enlarge the text */
+        font-size: 16px;
     }
-</style>
 
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
