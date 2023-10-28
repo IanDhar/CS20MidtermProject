@@ -159,21 +159,28 @@
     }
 
     .event {
+        display: flex; /* Stack the content in the event boxes */
+        flex-direction: column;
+        align-items: center; /* Center the content horizontally */
         margin: 20px;
         padding: 20px;
         border: 2px solid #fff;
         background-color: #f9f9f9;
-	text-align: center; /* Center the feature boxes horizontally */
-	 justify-content: center; /* Center the feature boxes vertically */
+        text-align: center;
     }
 
     .event img {
-        width: 80%;
+        width: 100%;
         height: auto;
     }
 
     .event h3 {
         margin: 10px 0;
+        font-size: 24px; /* Enlarge the text */
+    }
+
+    .event p {
+        font-size: 18px; /* Enlarge the text */
     }
 </style>
 
