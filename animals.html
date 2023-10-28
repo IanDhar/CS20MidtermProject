@@ -1,145 +1,102 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
-* {
-  box-sizing: border-box;
-}
-body {
-    font-family: Arial;
-    padding: 10px;
-    margin: 0px;
-    background: #f1f1f1;
-}
-h3, p {
-    margin: 0px;
-}
-.leftcolumn {   
-  float: left;
-  width: 50%;
-}
-.rightcolumn {
-  float: left;
-  width: 50%;
-  background-color: #f1f1f1;
-  padding-left: 20px;
-}
-.card {
-    float: left;
-    background-color: white;
-    padding: 0px;
-    margin-top: 20px;
-    border: 7px solid #Ccd5ae;
-    border-radius: 10px;
-}
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
-}
-div {
-    padding: 0px;
-    margin: 0px;
-}
-.img-container {
-    float: left;
-    width: 50%;
-    height: auto;
-    margin: auto 0px;
-    overflow: hidden;
-}
-.img-container img {
-    display: block;
-    max-width: 100%;
-}
-.text-container {
-    float: left;
-    width: 50%;
-    padding: 10px;
-    vertical-align: middle;
-}
-
-</style>
+    <link rel="stylesheet" href="card_style.css">
+    <style>
+        @media (max-width: 800px) {
+            .leftcolumn, .rightcolumn {
+                width: 100%;
+                padding: 0px;
+            }
+        }
+        @media (max-width: 500px) {
+            body .img-container, body .text-container {
+                float: none;
+                width: 100%;
+            }
+            body .card {
+                float: none;
+                max-width: 200px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style>
 </head>
+
 <body>
-
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-        <div class="img-container">
-            <img src="images/alpaca.jpg"></img>
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <div class="img-container">
+                    <img src="images/alpaca.jpg"></img>
+                </div>
+                <div class="text-container">
+                    <h3>Alpaca</h3>
+                    <p>Our fluffy alpacas, known for their gentle nature and soft fleece,
+                        are a favorite among visitors for their friendly personalities.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src="images/piglets.jpg"></img>
+                </div>
+                <div class="text-container">
+                    <h3>Piglets</h3>
+                    <p>These little piggies are full of charm, always ready for some belly
+                        rubs and delighted oinks as they root around in the mud.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src="images/chickens.jpg"></img>
+                </div>
+                <div class="text-container">
+                    <h3>Chickens</h3>
+                    <p>Our clucking chickens are the true workhorses of the farm, always on
+                        the move and ready to entertain with their busy antics.
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="text-container">
-            <h3>Alpaca</h3>
-            <p>Our fluffy alpacas, known for their gentle nature and soft fleece, 
-                are a favorite among visitors for their friendly personalities.</p>
+        <div class="rightcolumn">
+            <div class="card">
+                <div class="img-container">
+                    <img src="images/goats.jpg"></img>
+                </div>
+                <div class="text-container">
+                    <h3>Goats</h3>
+                    <p>Our playful goats are a highlight for both kids and adults, offering
+                        a chance to feed, pet, and engage with these spirited creatures.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src="images/rabbits.jpg"></img>
+                </div>
+                <div class="text-container">
+                    <h3>Rabbits</h3>
+                    <p>Our adorable bunnies are soft, cuddly, and perfect for little hands
+                        to pet, making them a must-visit for our younger farm guests.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src="images/cows.jpg"></img>
+                </div>
+                <div class="text-container">
+                    <h3>Cows</h3>
+                    <p>Our dairy cows are the gentle giants of the farm, providing us with
+                        rich, creamy milk and a soothing presence in the pasture.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="card">
-        <div class="img-container">
-            <img src="images/piglets.jpg"></img>
-        </div>
-        <div class="text-container">
-            <h3>Piglets</h3>
-            <p>These little piggies are full of charm, always ready for some belly 
-                rubs and delighted oinks as they root around in the mud.
-            </p>
-        </div>
-    </div>
-    <div class="card">
-        <div class="img-container">
-            <img src="images/chickens.jpg"></img>
-        </div>
-        <div class="text-container">
-            <h3>Chickens</h3>
-            <p>Our clucking chickens are the true workhorses of the farm, always on 
-                the move and ready to entertain with their busy antics.
-            </p>    
-        </div>
-    </div>
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-        <div class="img-container">
-            <img src="images/goats.jpg"></img>
-        </div>
-        <div class="text-container">
-            <h3>Goats</h3>
-            <p>Our playful goats are a highlight for both kids and adults, offering 
-                a chance to feed, pet, and engage with these spirited creatures.
-            </p>
-        </div>
-    </div>
-    <div class="card">
-        <div class="img-container">
-            <img src="images/rabbits.jpg"></img>
-        </div>
-        <div class="text-container">
-            <h3>Rabbits</h3>
-            <p>Our adorable bunnies are soft, cuddly, and perfect for little hands 
-                to pet, making them a must-visit for our younger farm guests.
-            </p>
-        </div>
-    </div>
-    <div class="card">
-        <div class="img-container">
-            <img src="images/cows.jpg"></img>
-        </div>
-        <div class="text-container">
-            <h3>Cows</h3>
-            <p>Our dairy cows are the gentle giants of the farm, providing us with 
-                rich, creamy milk and a soothing presence in the pasture.
-            </p>
-        </div>
-    </div>
-  </div>
-</div>
-
 </body>
+
 </html>
