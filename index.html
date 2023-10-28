@@ -157,13 +157,17 @@
 	        text-align: center;
 	        margin-top: 40px;
 		    align-items: center;
+	display: flex; /* Display events side by side */
+        flex-wrap: wrap; /* Wrap events to the next line if they don't fit */
+        justify-content: center;
 	    }
 
     .event {
+	    flex: 1;
         display: flex; /* Stack the content in the event boxes */
         flex-direction: column;
         align-items: center; /* Center the content horizontally */
-        margin: 20px;
+        margin: 10px;
         padding: 10px;
         border: 2px solid #fff;
         background-color: #f9f9f9;
