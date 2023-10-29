@@ -165,6 +165,11 @@
 	        $("#slide img").attr("src", "images/" + imgs[slideIndex]);
 	        $("#slide img").fadeIn(2000, slideShow);
 	    }
+	$(document).ready(function () {
+                    $(".hamburger").on('click', function () {
+                        $(".nav-bar").toggleClass("active");
+                    });
+                });
 	</script>
 
 </head>
