@@ -8,157 +8,172 @@
     <link rel="stylesheet" type="text/css" href="nav.css">
     <title>Lucky Charm Farm Website</title>
     <style>
-    header {
-        margin-bottom: 20px;
-    }
-    main {
-        padding: 40px;
-        margin-bottom: 40px; /* Increased the margin for better spacing */
-    }
-    * {
-        box-sizing: border-box;
-    }
-
-    .slideshow-container {
-        max-width: 800px;
-        margin: 0 auto; /* Center the slideshow */
-        padding: 20px; /* Adjusted padding */
-        text-align: center;
-    }
-
-    /* Hide the images by default */
-    .mySlides {
-        display: none;
-        display: inline-block;
-    }
-    /* Add this CSS to make slideshow images uniform in size */
-    #slide img {
-        width: 100%;
-        height: 300px;
-        justify-content: center;
-    }
-
-    .about-us {
-        padding: 20px; /* Adjusted padding */
-        margin-top: 40px;
-        text-align: center; /* Center the text */
-    }
-
-    .fade {
-        animation-name: fade;
-        animation-duration: 1.5s;
-    }
-
-    @keyframes fade {
-        from {
-            opacity: 0.4;
+	header {
+		margin-bottom: 20px;
+    	}
+        main {
+            padding: 40px;
+	    margin-bottom: 20px;
         }
-        to {
-            opacity: 1;
+        * {box-sizing:border-box}
+
+        .slideshow-container {
+          max-width: 800px;
+          position: center;
+	  margin-bottom: 40px;
+	  margin-top: 40px;
+	  padding: 400px;
+	  text-align: center;
         }
-    }
+	    
+        .mySlides {
+          display: none;
+		display: inline-block;
+        }
+	    
+	#slide img {
+	    width: 100%; 
+	    height: 300px; 
+	    justify-content: center;
+	}
 
-    .feature-box-container {
-        padding: 20px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap; /* Allow feature boxes to wrap to the next line on smaller screens */
-    }
+	.about-us {
+		padding: 20px 20px;
+		margin-top: 40 px;
+	}
+	    
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @keyframes fade {
+          from {opacity: .4}
+          to {opacity: 1}
+        }
+	
+	.feature-box-container {
+		padding: 20px 20px;
+		text-align: center;
+		display: flex;
+		justify-content: center; 
+		margin-top: 20px;
+		background-color: #d4a373;
+	}
+	
+	.feature-box {
+		text-align: center;
+		border: 4px solid #fff;
+		margin: 40px;
+		display: inline-block;
+		transition: all 0.3s;
+		background-color: #faedcd;
+	}
+	    
+	.feature-box:hover {
+		background-color: #f2f2f2;
+	}
+	
+	.feature-box img {
+		width: 300px; 
+		height: 300px; 
+		
+		display: block;
+		margin: 0 auto;
+	}
+	
+	.feature-box p {
+		font-weight: bold;
+		color: black;
+		transition: color 0.3s;
+	}
+	.feature-box:hover p {
+		color: gold; 
+	}
+	@media (max-width: 600px) {
+		.feature-box-container {
+		flex-direction: column; 
+		align-items: center;
+	}
+	
+	.feature-box {
+		width: 80%;
+		margin: 20px auto;
+	}
+	
+	.feature-box img {
+		max-width: 100%; 
+		height: auto; 
+	}
+}
+	.upcoming-events {
+	        text-align: center;
+	        margin-top: 40px;
+	        display: flex; 
+		flex-direction: column; 
+	        align-items: center; 
+	        flex-wrap: wrap;
+	        justify-content: 
+		padding 20px;
+	}
 
-    .feature-box {
-        text-align: center;
-        border: 4px solid #fff;
-        margin: 20px; /* Reduced margin for better spacing */
-        flex: 0 0 calc(33.333% - 40px); /* Adjusted the width to fit 3 boxes per row */
-        transition: all 0.3s;
-    }
-    .feature-box:hover {
-        background-color: #f2f2f2;
-    }
+	.event {
+		flex: 1;
+		margin: 10px;
+		padding: 10px;
+		border: 2px solid #fff;
+		background-color: #f9f9f9;
+		text-align: center;
+		max-width: 350px;
+	}
+	
+	.event img {
+		width: 100%;
+		height: auto;
+	}
+	
+	.event h3 {
+		margin: 10px 0;
+		font-size: 20px;
+	}
+	
+	.event p {
+		font-size: 16px;
+	}
 
-    .feature-box img {
-        width: 100%;
-        height: auto; /* Maintain the aspect ratio */
-        display: block;
-        margin: 0 auto;
-    }
-
-    .feature-box p {
-        font-weight: bold;
-        color: black;
-        transition: color 0.3s;
-    }
-    .feature-box:hover p {
-        color: gold;
-    }
-
-    .upcoming-events {
-        text-align: center;
-        margin-top: 40px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .event {
-        flex: 1;
-        margin: 10px;
-        padding: 10px;
-        border: 2px solid #fff;
-        background-color: #f9f9f9;
-        text-align: center;
-        max-width: 350px;
-    }
-
-    .event img {
-        width: 100%;
-        height: auto;
-    }
-
-    .event h3 {
-        margin: 10px 0;
-        font-size: 20px;
-    }
-
-    .event p {
-        font-size: 16px;
-    }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <style type="text/css">
-        #slides-wrapper {
-            height: 320px;
-        }
-    </style>
-    <script language="javascript">
-        imgs = ["farmsun.jpeg", "produce.jpeg", "cows.jpeg"];
-        var slideIndex = 0;
+	<style type="text/css">
+		#slides-wrapper{height:320px;}
+	</style>
+	<script language="javascript">
+	    imgs = ["farmsun.jpeg", "produce.jpeg", "cows.jpeg"];
+	    var slideIndex = 0;
+	
+	    $(document).ready(function () {
+	        // Start the slideshow when the page loads
+	        slideShow();
+	    });
+	
+	    function slideShow() {
+	        $("#slide img").fadeOut(2000, nextSlide);
+	    }
+	
+	    function nextSlide() {
+	        slideIndex++;
+	        slideIndex = slideIndex == imgs.length ? 0 : slideIndex;
+	        $("#slide img").attr("src", "images/" + imgs[slideIndex]);
+	        $("#slide img").fadeIn(2000, slideShow);
+	    }
+	</script>
 
-        $(document).ready(function () {
-            // Start the slideshow when the page loads
-            slideShow();
-        });
-
-        function slideShow() {
-            $("#slide img").fadeOut(2000, nextSlide);
-        }
-
-        function nextSlide() {
-            slideIndex++;
-            slideIndex = slideIndex == imgs.length ? 0 : slideIndex;
-            $("#slide img").attr("src", "images/" + imgs[slideIndex]);
-            $("#slide img").fadeIn(2000, slideShow);
-        }
-    </script>
 </head>
 <body>
     <header>
-        <div class="logo"><img src="Logo.png" alt="Lucky Charm logo"></div>
+	    <div class="logo"><img src="Logo.png" alt="Lucky Charm logo"></div>
         <div class="hamburger">
             <div class="line"></div>
-            <div class "line"></div>
+            <div class="line"></div>
             <div class="line"></div>
         </div>
         <nav class="nav-bar">
@@ -191,49 +206,50 @@
         <h1>Welcome to Our Farm</h1>
         <p>Harvesting Happiness, Cultivating Charm!</p>
         <div id='slides-wrapper'>
-            <div id='slide'>
-                <img src="images/farmsun.jpeg" />
-            </div>
-        </div>
-        <div id="about-us">
+		<div id='slide'>
+			<img src="images/farmsun.jpeg" />
+		</div>
+    	</div>
+    	<div id="about-us">
             <h2>About Us</h2>
             <p>Welcome to Lucky Charm Farm! We are a family-owned farm dedicated to providing the freshest produce and a unique farm experience. Our commitment to quality and sustainability is at the heart of everything we do. Explore our farm, meet our animals, and enjoy the bountiful harvest of fresh vegetables and fruits. We can't wait to share the charm of our farm with you.</p>
+	</div>
+	    <div class="feature-box-container">
+		    <a href="produce.html" class="feature-link">
+		        <div class="feature-box">
+		            <img src="images/localproduce.jpeg" alt="Produce">
+		            <p>Produce</p>
+		        </div>
+		    </a>
+		    <a href="picking.html" class="feature-link">
+		        <div class="feature-box">
+		            <img src="images/applepicking.jpeg" alt="Picking">
+		            <p>Picking</p>
+		        </div>
+		    </a>
+		    <a href="animals.html" class="feature-link">
+		        <div class="feature-box">
+            <img src="images/goats.jpg" alt="Animals">
+            <p>Animals</p>
         </div>
-        <div class="feature-box-container">
-            <a href="produce.html" class="feature-link">
-                <div class="feature-box">
-                    <img src="images/localproduce.jpeg" alt="Produce">
-                    <p>Produce</p>
-                </div>
-            </a>
-            <a href="picking.html" class="feature-link">
-                <div class="feature-box">
-                    <img src="images/applepicking.jpeg" alt="Picking">
-                    <p>Picking</p>
-                </div>
-            </a>
-            <a href="animals.html" class="feature-link">
-                <div class="feature-box">
-                    <img src="images/goats.jpg" alt="Animals">
-                    <p>Animals</p>
-                </div>
-            </a>
+    </a>
+</div>
+	<h2 style="text-align:center;" class="text-underlined">Upcoming Events</h2>
+	<div class="upcoming-events"> 
+        <div class="event">
+            <img src="images/hnight4.jpeg" alt="Halloween Night">
+            <h3>Halloween Night on the Farm</h3>
+            <p>Date: October 31, 2023</p>
+            <p>Join us for a spooky and fun Halloween night on the farm. Dress up in your favorite costumes and enjoy hayrides, pumpkin carving, and more!</p>
         </div>
-        <h2 style="text-align:center;" class="text-underlined">Upcoming Events</h2>
-        <div class="upcoming-events">
-            <div class="event">
-                <img src="images/hnight4.jpeg" alt="Halloween Night">
-                <h3>Halloween Night on the Farm</h3>
-                <p>Date: October 31, 2023</p>
-                <p>Join us for a spooky and fun Halloween night on the farm. Dress up in your favorite costumes and enjoy hayrides, pumpkin carving, and more!</p>
-            </div>
-            <div class="event">
-                <img src="images/corn-maze.jpeg" alt="Haunted Corn Maze">
-                <h3>Haunted Corn Maze</h3>
-                <p>Date: October 29-30, 2023</p>
-                <p>Experience the thrill of our haunted corn maze. Can you make it through without getting spooked?</p>
-            </div>
+        <div class="event">
+            <img src="images/corn-maze.jpeg" alt="Haunted Corn Maze">
+            <h3>Haunted Corn Maze</h3>
+            <p>Date: October 29-30, 2023</p>
+            <p>Experience the thrill of our haunted corn maze. Can you make it through without getting spooked?</p>
         </div>
+    </div>
+
     </main>
     <footer>
         &copy; 2023 Lucky Charm Farm. All rights reserved.
