@@ -7,10 +7,10 @@
 font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
-/* 
+
 body{
     background: #fefefe;
-} */
+}
 
 header{
     width: 100%;
@@ -22,10 +22,15 @@ header{
     padding: 0 100px;
 }
 
+.logo{
+    position: relative;
+    z-index: 2;
+}
 .logo img {
     margin-top: 20px;
     max-width: 150px;
     max-height: 100px;
+    z-index: 2;
 }
 
 .hamburger{
@@ -89,6 +94,7 @@ header{
         background: #d4a373;
         transition: .2s;
         overflow: hidden;
+        z-index: 1;
     }
     .nav-bar.active{
         height: 450px;
