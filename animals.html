@@ -2,6 +2,9 @@
 <html>
 
 <head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
     <link rel="stylesheet" href="card_style.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="nav.css">
@@ -144,6 +147,13 @@
         <br>
         Location: 777 Lucky Road, Charmville, USA
     </footer>
+    <script>
+        $(document).ready(function () {
+    $(".hamburger").on('click', function () {
+        $(".nav-bar").toggleClass("active");
+    });
+});
+    </script>
 </body>
 
 </html>
