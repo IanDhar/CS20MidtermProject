@@ -1,48 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Fall Website</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" type="text/css" href="animal.css">
+    
+    <style>
+
+    *{
+    box-sizing: border-box;
+    list-style:disc;
+    }
+.container {
+    position: relative; /* Create a positioning context for child elements */
+    width: 100%;
+    height: 100vh;
+    background: #f3e0b6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#panel, #flip {
+  padding: 5px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #d4a373;
+  color: white;
+  border: solid 1px #666;
+  border-radius: 3px;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+.leftcolumn {
+    float: left;
+    width: 50%;
+}
 
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#events.html">Events</a></li>
-                <li><a href="#">Picking</a></li>
-                <li><a href="produce.html">Produce</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="#">Gallery</a></li>
-            </ul>
-        </nav>
-    </header>
+.rightcolumn {
+    float: right;
+    width: 50%;
+    padding-left: 5px;
+}
+
+.card {
+    background: white;
+    margin-top: 20px;
+    border: 7px solid #Ccd5ae;
+    border-radius: 10px;
+}
+
+    </style>
+
+<script> 
+    $(document).ready(function(){
+        $("#flip").click(function(){
+            $("#panel").slideToggle("slow");
+        });
+    });
+    </script>
+    <title>Produce</title>
 </head>
 
 <body>
+        <header>
+        <div class="logo"><img src="Logo.png" alt="Lucky Charm logo"></div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="events.html">Events</a>
+                </li>
+                <li>
+                    <a href="picking.html">Picking</a>
+                </li>
+                <li>
+                    <a href="produce.html" class="active">Produce</a>
+                </li>
+                <li>
+                    <a href="animals.html">Animals</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <center>
-        <h1>Produce</h1>
-        </center>
-    
+        
+        <div id="flip"><h2>Produce</h2></div>
+        <div id="panel">Organic produce from our farm represents a commitment to sustainable and environmentally friendly farming practices. We prioritize the use of natural methods to cultivate our crops, avoiding synthetic pesticides and fertilizers. Our organic produce is grown without genetically modified organisms (GMOs) and is free from harmful chemicals.
 
+            By choosing organic farming methods, we promote soil health, biodiversity, and the overall well-being of our ecosystem. Our crops are nurtured using organic compost, crop rotation, and pest management techniques that focus on natural predators and beneficial insects.
+            
+            The result is produce that not only tastes delicious but is also better for you and the environment. Our organic fruits, vegetables, and herbs are brimming with flavor and nutrition, providing you with a healthier and more sustainable choice for your meals. When you choose our organic produce, you're not only enjoying fresh, wholesome food but also supporting a farming approach that values the planet and future generations.</div>
+
+        <div class="row">
+            <div class="leftcolumn">
+                <div class="card">
+                    <h2>Shop gifts for the home</h2>
+                    <img src="sub-01.jpg";>
+                    
+                </div>
+
+                <div class="card">
+                        <h2>Shop branded merchandise </h2>
+                        <img src="sub-02.jpeg" width: 100%; height:auto;>
+                        
+                        
+                </div>
+            </div>
+            
+            <div class="rightcolumn">
+                <div class="card">
+                    <h2>Shop for clothing made from organic material</h2>
+                    <img src="sub-03.jpeg" width: 100%; height:auto;>
+                    
+                </div>
+                
+                
+                    <div class="card">
+                        <h2>Shop organic produce fresh from the farm</h2>
+                        <img src="sub-04.jpeg" width: 100%; height:auto;>
+                        
+                    </div>
+                
+            </div>
+        </div>
+    
     </main>
-    
 
-    <footer>
-        &copy; 2023 Your Farm. All rights reserved.
-        <br>
-        <a href="#">Facebook</a>
-        <a href="#">Twitter</a>
-        <a href="#">Instagram</a>
-        <br>
-        Contact Us: contact@yourfarm.com
-        <br>
-        Location: 123 Farm Road, Farmville, USA
-    </footer>
+    
+            
 </body>
+
 </html>
