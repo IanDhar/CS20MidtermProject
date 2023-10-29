@@ -7,101 +7,101 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="nav.css">
     <style>
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: #f3e0b6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-        *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-        
-body{
-    background: #fefefe;
-} 
-.container {
-    position: relative; /* Create a positioning context for child elements */
-    width: 100%;
-    height: 100vh;
-    background: #f3e0b6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        h1 {
+            text-align: center;
+            padding-top: 10%;
+            padding-bottom: 0%;
+            background-color: #f3e0b6;
+            font-family: 'Cursive Font', cursive;
+            font-size: 36px;
+            color: #d4a373;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
 
-h1 {
-    text-align: center; /* Center the content horizontally */
-    padding-top: 10%;
-    padding-bottom: 0%;
-}
+        .container form {
+            width: 90%;
+            max-width: 500px;
+            padding: 50px 30px 20px;
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
 
+        .input-group {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            position: relative;
+        }
 
-.container form{
-    width: 90%;
-    max-width: 500px;
-    padding: 50px 30px 20px;
-    background: #fff;
-    border-radius: 4px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-    position: relative;
-}
+        .input-group label {
+            flex-basis: 28%;
+        }
 
-.input-group{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-    position: relative;
-}
-.input-group label{
-    flex-basis: 28%;
-}
-.input-group input, .input-group textarea{
-    flex-basis: 68%;
-    background: transparent;
-    border: 0;
-    outline: 0;
-    padding: 10px 0;
-    border-bottom: 1px solid #999;
-    color: #333;
-    font-size: 16px;
-}
-::placeholder{
-    font-size: 14px;
-}
+        .input-group input,
+        .input-group textarea {
+            flex-basis: 68%;
+            background: transparent;
+            border: 0;
+            outline: 0;
+            padding: 10px 0;
+            border-bottom: 1px solid #999;
+            color: #333;
+            font-size: 16px;
+        }
 
-form button{
-    background: #d4a373;
-    color: #fff;
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    padding: 10px 40px;
-    outline: 0;
-    cursor: pointer;
-    display: block;
-    margin: 30px auto 10px;
-}
+        ::placeholder {
+            font-size: 14px;
+        }
 
-.input-group span{
-    position:absolute;
-    bottom: 12px;
-    right: 17px;
-    font-size: 14px;
-    color: red;
-}
+        form button {
+            background: #d4a373;
+            color: #fff;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            padding: 10px 40px;
+            outline: 0;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto 10px;
+        }
 
-#sumbit-error{
-    color: red;
-}
+        .input-group span {
+            position: absolute;
+            bottom: 12px;
+            right: 17px;
+            font-size: 14px;
+            color: red;
+        }
+
+        #sumbit-error {
+            color: red;
+        }
     </style>
     <title>Contact</title>
 </head>
 
+
 <body>
-        <header>
-        <div class="logo"><img src="Logo.png" alt="Lucky Charm logo"></div>
+    <header>
+        <div class="logo"><a href="index.html"><img src="Logo.png"
+                    alt="Lucky Charm logo"></a></div>
         <div class="hamburger">
             <div class="line"></div>
             <div class="line"></div>
@@ -157,10 +157,6 @@ form button{
                 <span id="email-error"></span>
             </div>
 
-            <!-- <div class="input-group">
-                <label>Your Message</label>
-                <textarea rows="5" placeholder="Enter your message"></textarea>
-              </div> -->
 
             <button id="submit-button">Submit</button>
             <span id="submit-error"></span>
@@ -171,12 +167,12 @@ form button{
                     var phoneError = $('#phone-error');
                     var emailError = $('#email-error');
                     var submitError = $('#submit-error');
-            
+
                     $('#contact-name').on('keyup', validateName);
                     $('#phone-no').on('keyup', validatePhone);
                     $('#email-input').on('keyup', validateEmail);
-                    $('#submit-button').on('keyup',validateForm)
-            
+                    $('#submit-button').on('click', validateForm)
+
                     function validateName() {
                         var name = $('#contact-name').val();
                         if (name.length == 0) {
@@ -221,16 +217,21 @@ form button{
                         return true;
                     }
 
-                    function validateForm(){
-                        if(!validateEmail() || !validateName() || !validatePhone()){
+                    function validateForm() {
+                        if (!validateEmail() || !validateName() || !validatePhone()) {
                             submitError.text = 'Please fix to submit'
                             return false
                         }
 
                     }
                 })
+                $(document).ready(function () {
+                    $(".hamburger").on('click', function () {
+                        $(".nav-bar").toggleClass("active");
+                    });
+                });
             </script>
-            
+
 </body>
 
 </html>
