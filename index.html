@@ -9,7 +9,7 @@
     <title>Lucky Charm Farm Website</title>
     <style>
 	header {
-        	margin-bottom: 20px; /* Add space below the header */
+		margin-bottom: 20px;
     	}
         main {
             padding: 40px;
@@ -25,29 +25,23 @@
 	  padding: 400px;
 	  text-align: center;
         }
-	
-
-        /* Hide the images by default */
+	    
         .mySlides {
           display: none;
 		display: inline-block;
         }
-	/* Add this CSS to make slideshow images uniform in size */
+	    
 	#slide img {
-	    width: 100%; /* Set the width to 100% to fit within the slideshow container */
-	    height: 300px; /* Set a fixed height for uniform size */
+	    width: 100%; 
+	    height: 300px; 
 	    justify-content: center;
 	}
-
-
 
 	.about-us {
 		padding: 20px 20px;
 		margin-top: 40 px;
 	}
 	    
-
-        /* Fading animation */
         .fade {
           animation-name: fade;
           animation-duration: 1.5s;
@@ -58,92 +52,93 @@
           to {opacity: 1}
         }
 	
-	    .feature-box-container {
+	.feature-box-container {
 		padding: 20px 20px;
-	        text-align: center; /* Center the feature boxes horizontally */
-	        display: flex;
-	        justify-content: center; /* Center the feature boxes vertically */
+		text-align: center;
+		display: flex;
+		justify-content: center; 
 		margin-top: 20px;
 		background-color: #d4a373;
-	    }
+	}
 	
-	    .feature-box {
-	        text-align: center;
-	        border: 4px solid #fff;
-	        margin: 40px;
-	        display: inline-block;
+	.feature-box {
+		text-align: center;
+		border: 4px solid #fff;
+		margin: 40px;
+		display: inline-block;
 		transition: all 0.3s;
-	    }
-	    .feature-box:hover {
-	        background-color: #f2f2f2; /* Change the background color on hover */
-	    }
-
+	}
+	    
+	.feature-box:hover {
+		background-color: #f2f2f2;
+	}
 	
-	    .feature-box img {
-	        width: 300px; /* Increase the width of the images */
-	        height: 300px; /* Increase the height of the images */
-		    
-	        display: block;
-	        margin: 0 auto;
-	    }
+	.feature-box img {
+		width: 300px; 
+		height: 300px; 
+		
+		display: block;
+		margin: 0 auto;
+	}
 	
-	    .feature-box p {
-	        font-weight: bold;
+	.feature-box p {
+		font-weight: bold;
 		color: black;
 		transition: color 0.3s;
-	    }
-	    .feature-box:hover p {
-	        color: gold; 
-	    }
-	     @media (max-width: 600px) {
-	            .feature-box-container {
-	                flex-direction: column; /* Stack the feature boxes vertically */
-	                align-items: center; /* Center the feature boxes horizontally */
-	            }
+	}
+	.feature-box:hover p {
+		color: gold; 
+	}
+	@media (max-width: 600px) {
+		.feature-box-container {
+		flex-direction: column; 
+		align-items: center;
+	}
 	
-	            .feature-box {
-	                width: 80%; /* Adjust the width for better mobile display */
-	                margin: 20px auto; /* Center the boxes horizontally */
-	            }
+	.feature-box {
+		width: 80%;
+		margin: 20px auto;
+	}
 	
-	            .feature-box img {
-	                max-width: 100%; /* Set a maximum width for the images */
-	                height: auto; /* Maintain aspect ratio */
-	            }
-	        }
-	    .upcoming-events {
-        text-align: center;
-        margin-top: 40px;
-        display: flex; /* Use flexbox to center the event boxes */
-	flex-direction: column; /* Stack events on top of each other */
-        align-items: center; /* Center events horizontally */
-        flex-wrap: wrap;
-        justify-content: center; /* Center horizontally */
-    }
+	.feature-box img {
+		max-width: 100%; 
+		height: auto; 
+	}
+}
+	.upcoming-events {
+	        text-align: center;
+	        margin-top: 40px;
+	        display: flex; 
+		flex-direction: column; 
+	        align-items: center; 
+	        flex-wrap: wrap;
+	        justify-content: 
+		padding 20px;
+	}
 
-    .event {
-        flex: 1;
-        margin: 10px;
-        padding: 10px;
-        border: 2px solid #fff;
-        background-color: #f9f9f9;
-        text-align: center;
-        max-width: 350px;
-    }
-
-    .event img {
-        width: 100%;
-        height: auto;
-    }
-
-    .event h3 {
-        margin: 10px 0;
-        font-size: 20px;
-    }
-
-    .event p {
-        font-size: 16px;
-    }
+	.event {
+		flex: 1;
+		margin: 10px;
+		padding: 10px;
+		border: 2px solid #fff;
+		background-color: #f9f9f9;
+		text-align: center;
+		max-width: 350px;
+	}
+	
+	.event img {
+		width: 100%;
+		height: auto;
+	}
+	
+	.event h3 {
+		margin: 10px 0;
+		font-size: 20px;
+	}
+	
+	.event p {
+		font-size: 16px;
+	}
 
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
