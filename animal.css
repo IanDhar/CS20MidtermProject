@@ -14,10 +14,9 @@
     border: 7px solid #Ccd5ae;
     border-radius: 10px;
 }
-.fakeimg {
-    
-    width:10px;
-}
+.img {
+    width: 100%;
+    height:auto;
 .row::after {
     content: "";
     display: table;
