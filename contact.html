@@ -111,7 +111,7 @@
         <nav class="nav-bar">
             <ul>
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="index.html" class="active">Home</a>
                 </li>
                 <li>
                     <a href="about.html">About Us</a>
@@ -129,7 +129,7 @@
                     <a href="animals.html">Animals</a>
                 </li>
                 <li>
-                    <a href="contact.html" class="active">Contact</a>
+                    <a href="contact.html">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -157,95 +157,150 @@
                 <input type="email" placeholder="Enter Email" id="email-input">
                 <span id="email-error"></span>
             </div>
+            <div class="input-group">
+                <label>Gender</label>
+                <input type="radio" name="gender" value="Male" id="radio-male">
+                <label for="radio-male">Male</label>
+                
+                <input type="radio" name="gender" value="Female" id="radio-female">
+                <label for="radio-female">Female</label>
+                
+                <input type="radio" name="gender" value="Other" id="radio-other">
+                <label for="radio-other">Other</label>
+            </div>            
+
+            <div class="input-group">
+                <label>Age Groups</label>
+                <input type="checkbox" id="checkbox-under18"
+                    class="age-group-checkbox">
+                <label for="checkbox-under18">&lt; 18</label>
+                <input type="checkbox" id="checkbox-18to30"
+                    class="age-group-checkbox">
+                <label for="checkbox-18to30">18-30</label>
+                <input type="checkbox" id="checkbox-31to50"
+                    class="age-group-checkbox">
+                <label for="checkbox-50+">50+</label>
+            </div>
+
             <button id="submit-button">Submit</button>
             <span id="submit-error"></span>
         </form>
+
     </div>
-        
 
 
-        <footer>
-                &copy; 2023 Lucky Charm Farm. All rights reserved.
-                <br>
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
-                <br>
-                Contact Us: contact@luckycharmfarm.com
-                <br>
-                Location: 777 Lucky Road, Charmville, USA
-            </footer>
 
-            <script>
-                $(document).ready(function () {
-                    var nameError = $('#name-error');
-                    var phoneError = $('#phone-error');
-                    var emailError = $('#email-error');
-                    var submitError = $('#submit-error');
+    <footer>
+        &copy; 2023 Lucky Charm Farm. All rights reserved.
+        <br>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+        <br>
+        Contact Us: contact@luckycharmfarm.com
+        <br>
+        Location: 777 Lucky Road, Charmville, USA
+    </footer>
 
-                    $('#contact-name').on('keyup', validateName);
-                    $('#phone-no').on('keyup', validatePhone);
-                    $('#email-input').on('keyup', validateEmail);
-                    $('#submit-button').on('click', validateForm)
+    <script>
+        $(document).ready(function () {
+            var nameError = $('#name-error');
+            var phoneError = $('#phone-error');
+            var emailError = $('#email-error');
+            var genderError = $('#gender-error');
+            var ageError = $('#age-error');
+            var submitError = $('#submit-error');
 
-                    function validateName() {
-                        var name = $('#contact-name').val();
-                        if (name.length == 0) {
-                            nameError.text('Name is required');
-                            return false;
-                        }
-                        if (!name.match(/\w+\s+\w+/)) {
-                            nameError.text('Write full name');
-                            return false;
-                        }
-                        nameError.text('Valid');
-                        return true;
-                    }
+            $('#contact-name').on('keyup', validateName);
+            $('#phone-no').on('keyup', validatePhone);
+            $('#email-input').on('keyup', validateEmail);
+            $('input[name="gender"]').on('change', validateGender);
+            $('.age-group-checkbox').on('change', validateAgeGroups);
+            $('#submit-button').on('click', validateForm);
 
-                    function validatePhone() {
-                        var phone = $('#phone-no').val();
-                        if (phone.length == 0) {
-                            phoneError.text('Phone number required');
-                            return false;
-                        }
-                        //This regiex is saying if they aren't numbers and
-                        //there length is not nine
-                        if (!phone.match(/^[0-9]{10}$/) && phone.length < 11) {
-                            phoneError.text('Invalid Number');
-                            return false;
-                        }
-                        phoneError.text('Valid');
-                        return true;
-                    }
+            function validateName() {
+                var name = $('#contact-name').val();
+                if (name.length === 0) {
+                    nameError.text('Name is required');
+                    return false;
+                }
+                if (!name.match(/\w+\s+\w+/)) {
+                    nameError.text('Write full name');
+                    return false;
+                }
+                nameError.text('Valid');
+                return true;
+            }
 
-                    function validateEmail() {
-                        var email = $('#email-input').val();
-                        if (email.length == 0) {
-                            emailError.text('Email required');
-                            return false;
-                        }
-                        if (!email.match(/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/)) {
-                            emailError.text('Invalid Email');
-                            return false;
-                        }
-                        emailError.text('Valid');
-                        return true;
-                    }
+            function validatePhone() {
+                var phone = $('#phone-no').val();
+                if (phone.length === 0) {
+                    phoneError.text('Phone number required');
+                    return false;
+                }
+                if (!phone.match(/^[0-9]{10}$/) && phone.length < 11) {
+                    phoneError.text('Invalid Number');
+                    return false;
+                }
+                phoneError.text('Valid');
+                return true;
+            }
 
-                    function validateForm() {
-                        if (!validateEmail() || !validateName() || !validatePhone()) {
-                            submitError.text = 'Please fix to submit'
-                            return false
-                        }
+            function validateEmail() {
+                var email = $('#email-input').val();
+                if (email.length === 0) {
+                    emailError.text('Email required');
+                    return false;
+                }
+                if (!email.match(/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/)) {
+                    emailError.text('Invalid Email');
+                    return false;
+                }
+                emailError.text('Valid');
+                return true;
+            }
 
-                    }
-                })
-                $(document).ready(function () {
-                    $(".hamburger").on('click', function () {
-                        $(".nav-bar").toggleClass("active");
-                    });
-                });
-            </script>
+            function validateGender() {
+                var genderRadioButtons = $('input[name="gender"]');
+                if (!genderRadioButtons.is(':checked')) {
+                    genderError.text('Please select a gender');
+                    return false;
+                }
+                genderError.text('Valid');
+                return true;
+            }
+
+            function validateAgeGroups() {
+                var ageCheckboxes = $('.age-group-checkbox');
+                if (!ageCheckboxes.is(':checked')) {
+                    ageError.text('Please select at least one age group');
+                    return false;
+                }
+                ageError.text('Valid');
+                return true;
+            }
+
+            function validateForm() {
+                var isNameValid = validateName();
+                var isPhoneValid = validatePhone();
+                var isEmailValid = validateEmail();
+                var isGenderValid = validateGender();
+                var isAgeGroupsValid = validateAgeGroups();
+
+                if (!(isNameValid && isPhoneValid && isEmailValid && isGenderValid && isAgeGroupsValid)) {
+                    submitError.text('Please fix to submit');
+                    return false;
+                }
+            }
+        });
+
+        $(document).ready(function () {
+            $(".hamburger").on('click', function () {
+                $(".nav-bar").toggleClass("active");
+            });
+        });
+
+    </script>
 
 </body>
 
